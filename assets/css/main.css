@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+:root {
+    --border: rgba(255, 255, 255, 0.2);
+    --radius: 10px;
+    --space: 20px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Lilita One', cursive;
+    user-select: none;
+}
+
+#novation {
+    border: solid 1px var(--border);
+    border-radius: var(--radius);
+    padding: var(--space);
+}
+
+#novation h3 {
+    border-bottom: 1px solid var(--border);
+    margin-bottom: var(--space);
+    padding-bottom: calc(var(--space) / 2);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#keyboard {
+    display: flex;
+    gap: 3px;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.key {
+    width: 60px;
+    height: 200px;
+    background: linear-gradient(to bottom right, rgb(225, 225, 225) 20%, white 40%);
+}
+
+.key:first-child {
+    border-radius: var(--radius) 0 0 var(--radius);
+}
+
+.key:last-child {
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+.up-key {
+    z-index: 1;
+    margin: 0 -21.5px;
+    width: 40px;
+    height: 100px;
+    background: linear-gradient(to bottom right, rgb(62, 62, 62) 50%, #222 70%);
+}
